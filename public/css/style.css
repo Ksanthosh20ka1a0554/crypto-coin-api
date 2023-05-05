@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.theme-light {
+    background: #fff;
+    position: relative;
+    min-height: 100vh;
+    color: #0c0f48;
+    font-family: Oswald,sans-serif;
+    font-weight: 300;
+}
+.theme-dark {
+    position: relative;
+    background: #191d28;
+    min-height: 100vh;
+    color: #fff;
+    font-family: Oswald,sans-serif;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .theme-dark input:checked+.slider {
+    background-color: #2e3241;
+}
+.color-green {
+    color: #5dc7c2;
+}
+.theme-dark .fiat-crypto-table tbody tr {
+    background-color: #2e3241;
+}
+.average-header-maintext {
+    font-weight: 400;
+    font-size: 40px;
+}
+.average-header-subHeading, .average-header-subtext {
+    font-weight: 400;
+    color: #0c0f48;
+    opacity: .45;
+    font-weight: 300;
+}
+.theme-dark .average-header-subHeading, .theme-dark .average-subText {
+    color: #fff;
+}
+.average-header-subHeading {
+    font-size: 20px;
+}
+.average-block {
+    padding-bottom: 30px;
+}
+.subText {
+    color: #fff;
+}
+.average-subText {
+    font-weight: 400;
+    color: #0c0f48;
+    opacity: .45;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: .75px;
+}
+.subText-heading {
+    font-size: 28px;
+}
+.average-heading {
+    font-weight: 400;
+    font-size: 80px;
+}
+.theme-dark .fiat-crypto-table {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.theme-dark .fiat-crypto-table table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    margin: 0;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+table {
+    border-collapse: collapse;
+}
+.pointer {
+    cursor: pointer;
+}
+.exchange-logo {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.exchange-name {
+    padding-left: 15px;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+.theme-dark .fiat-crypto-table td a {
+    color: #fff;
+    text-decoration: none;
+}
+.theme-dark .fiat-crypto-table th h4 {
+    font-family: Oswald;
+    font-size: 24px;
+    opacity: .45;
+    letter-spacing: 1px;
+    margin: 0 0 -5px;
+}
+.h4, h4 {
+    font-size: 1.5rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.theme-dark .fiat-crypto-table th {
+    color: #fff;
+    padding: 0 12px;
+}
+th {
+    font-weight: bold;
+    text-align: -internal-center;
+}
+.theme-dark .fiat-crypto-table tbody td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.theme-dark .fiat-crypto-table td h4 {
+    font-family: Oswald;
+    font-size: 24px;
+    margin: 0;
+    opacity: 1;
+}
+.table-text {
+    white-space: nowrap;
+    align-items: center;
+}
+.theme-dark .fiat-crypto-table td {
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.color-red {
+    color: #da5757;
+}

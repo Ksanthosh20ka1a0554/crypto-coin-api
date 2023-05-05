@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>hodlinfo api</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div id="#changebg" class="theme-dark changebg" style="padding: 20px 30px 0px;">
+    <div class="align-items-center justify-content-sm-center row">
+      <div class="text-center-sm col-12 col-sm-7 col-md-5 col-lg-4">
+        <a href="/">
+          <div class="padding-none text-center-xs col-12 col-sm-12 col-md-11 col-lg-11">
+            <img src="https://hodlinfo.com/static/media/HODLINFO.8f78fc06.png" class="fiat-logo"
+              style="padding: 10px;width: 70%;">
+          </div>
+        </a>
+      </div>
+      <div class="text-center padding-none col-12 col-sm-12 col-md-2 col-lg-4">
+        <div class="btn-group">
+          <button type="button" aria-haspopup="true" aria-expanded="false"
+            class="header-button dropdown-toggle btn btn-secondary">INR</button>
+          <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+            <a value="INR" tabindex="0" role="menuitem" class="dropdown-item" href="/BTC-INR">INR</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="button" aria-haspopup="true" aria-expanded="false"
+            class="header-button dropdown-toggle btn btn-secondary">BTC</button>
+          <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+            <a value="BTC" tabindex="0" role="menuitem" class="dropdown-item" href="/BTC-INR">BTC</a>
+            <a value="ETH" tabindex="0" role="menuitem" class="dropdown-item" href="/ETH-INR">ETH</a>
+            <a value="USDT" tabindex="0" role="menuitem" class="dropdown-item" href="/USDT-INR">USDT</a>
+            <a value="XRP" tabindex="0" role="menuitem" class="dropdown-item" href="/XRP-INR">XRP</a>
+            <a value="TRX" tabindex="0" role="menuitem" class="dropdown-item" href="/TRX-INR">TRX</a>
+            <a value="DASH" tabindex="0" role="menuitem" class="dropdown-item" href="/DASH-INR">DASH</a>
+            <a value="ZEC" tabindex="0" role="menuitem" class="dropdown-item" href="/ZEC-INR">ZEC</a>
+            <a value="XEM" tabindex="0" role="menuitem" class="dropdown-item" href="/XEM-INR">XEM</a>
+            <a value="IOST" tabindex="0" role="menuitem" class="dropdown-item" href="/IOST-INR">IOST</a>
+            <a value="WIN" tabindex="0" role="menuitem" class="dropdown-item" href="/WIN-INR">WIN</a>
+            <a value="BTT" tabindex="0" role="menuitem" class="dropdown-item" href="/BTT-INR">BTT</a>
+            <a value="WRX" tabindex="0" role="menuitem" class="dropdown-item" href="/WRX-INR">WRX</a>
+          </div>
+        </div>
+        <div class="btn-group">
+          <a target="_blank"
+            href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn"
+            type="button" aria-haspopup="true" aria-expanded="false" class="header-button btn btn-secondary">BUY BTC</a>
+        </div>
+      </div>
+      <div class="right-header col-12 col-sm-12 col-md-5 col-lg-4">
+        <div class="d-inline-flex flex-wrap align-items-center justify-content-center">
+          <div class="margin-10 d-inline-block">
+            <label class="switch">
+              <input name="checkbox" type="checkbox" value="on">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="padding-bottom-50">
+      <div class="Container-fluid " style="padding: 0px 30px;">
+        <div class="d-flex justify-content-around align-items-center average-header" style="padding: 10px 0px;">
+          <div class="text-center">
+            <div class="average-header-maintext color-green">0.72 %</div>
+            <div class="average-header-subHeading">5 Mins</div>
+          </div>
+          <div class="text-center">
+            <div class="average-header-maintext color-green">0.73 %</div>
+            <div class="average-header-subHeading">1 Hour</div>
+          </div>
+          <div style="max-width: 40%;">
+            <div class="text-center font-32 average-block">
+              <div class="average-subText"><span class="subText-heading">Best Price to Trade</span></div>
+              <div class="average-heading" style="padding-bottom: 10px;">₹ <%=bitcoin_data[0].buy_item%></div>
+              <div class="average-subText">Average BTC/INR net price including commission</div>
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="average-header-maintext color-green">1.64 %</div>
+            <div class="average-header-subHeading">1 Day</div>
+          </div>
+          <div class="text-center">
+            <div class="average-header-maintext color-green">10.05 %</div>
+            <div class="average-header-subHeading">7 Days</div>
+          </div>
+        </div>
+      </div>
+      <div class="fiat-crypto-table table-responsive" style="margin: 0px auto;">
+        <table class="table table-borderless text-center">
+          <thead>
+            <tr>
+              <th>
+                <h4><span class="pointer">#</span></h4>
+              </th>
+              <th>
+                <h4><span class="pointer">Name</span></h4>
+              </th>
+              <th>
+                <h4><span class="pointer">Last Traded Price</span></h4>
+              </th>
+              <th>
+                <h4><span class="pointer">Buy Price</span></h4>
+              </th>
+              <th>
+                <h4><span class="pointer">Sell Price</span></h4>
+              </th>
+              <th>
+                <h4><span class="pointer">Volume</span></h4>
+              </th>
+              <th>
+                <h4><span class="pointer">Base unit</span></h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%for(let i=0;i<10;i++){%>
+            <tr>
+              <td class="align-middle">
+                <h4 class="table-text"><%=i+1%></h4>
+              </td>
+              <td class="align-middle">
+                <h4 class="table-text"><%=bitcoin_data[i].title%></h4>
+              </td>
+              <td class="align-middle"><a target="_blank"
+                  href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn">
+                  <h4 class="table-text"><span class="exchange-name ">₹ <%=bitcoin_data[i].last_item%></span></h4>
+                </a></td>
+              <td class="align-middle">
+                <h4 class="table-text">₹ <%=bitcoin_data[i].buy_item%></h4>
+              </td>
+              <td class="align-middle">
+                <h4 class="table-text"><span>₹ <%=bitcoin_data[i].sell_item%></span></h4>
+              </td>
+              <td class="align-middle">
+                <h4 class="table-text"><%=bitcoin_data[i].volume_item%></h4>
+              </td>
+              <td class="align-middle">
+                <h4 class="table-text"><%=bitcoin_data[i].base_unit_item%></h4>
+              </td>
+            </tr>
+            <%}%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
