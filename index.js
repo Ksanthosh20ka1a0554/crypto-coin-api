@@ -45,11 +45,11 @@ app.get('/', function (req, res) {
                     var base_unit_value = apiData[index].base_unit;
                     //console.log(name_value,last_value,buy_value,sell_value,volume_value,base_unit_value);
                     //var sql=`INSERT INTO bitcoin_data(name, last, buy, sell, volume, base_unit) VALUES ('${name_value}','${last_value}','${buy_value}','${sell_value}','${volume_value}','${base_unit_value}')`;
-                    //var sql_upadate=`UPDATE bitcoin_data SET last='${last_value}',buy='${buy_value}',sell='${sell_value}',volume='${volume_value}',base_unit='${base_unit_value}' WHERE name='${name_value}'`;
-                    //con.query(sql_upadate, function (err, result) {
-                    //    if (err) throw err;
-                    //    console.log("1 record updated");
-                    //  });
+                    var sql_upadate=`UPDATE bitcoin_data SET last='${last_value}',buy='${buy_value}',sell='${sell_value}',volume='${volume_value}',base_unit='${base_unit_value}' WHERE name='${name_value}'`;
+                    con.query(sql_upadate, function (err, result) {
+                        if (err) throw err;
+                        console.log("1 record updated");
+                      });
 
                 }
                 
