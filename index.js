@@ -43,35 +43,18 @@ app.get('/', function (req, res) {
                     var sell_value = apiData[index].sell;
                     var volume_value = apiData[index].volume;
                     var base_unit_value = apiData[index].base_unit;
-                    //console.log(name_value,last_value,buy_value,sell_value,volume_value,base_unit_value);
-                    //var sql=`INSERT INTO bitcoin_data(name, last, buy, sell, volume, base_unit) VALUES ('${name_value}','${last_value}','${buy_value}','${sell_value}','${volume_value}','${base_unit_value}')`;
-                    var sql_upadate=`UPDATE bitcoin_data SET last='${last_value}',buy='${buy_value}',sell='${sell_value}',volume='${volume_value}',base_unit='${base_unit_value}' WHERE name='${name_value}'`;
-                    con.query(sql_upadate, function (err, result) {
-                        if (err) throw err;
-                        console.log("1 record updated");
-                      });
-
-                }
-                
-                var sql_fetch = "SELECT * FROM bitcoin_data";
-                con.query(sql_fetch, function (err, result, fields) {
-                    if (err) throw err;
-
-                    for (var i = 0; i < 10; i++) {
-                        var data = {
-                            title: result[i].name,
-                            last_item: result[i].last,
-                            buy_item: result[i].buy,
-                            sell_item: result[i].sell,
-                            volume_item: result[i].volume,
-                            base_unit_item: result[i].base_unit,
+                    var data = {
+                            title: apiData[index].name,
+                            last_item: apiData[index].last,
+                            buy_item: apiData[index].buy,
+                            sell_item: apiData[index].sell,
+                            volume_item: apiData[index].volume,
+                            base_unit_item: apiData[index].base_unit,
                         }
                         result_data.push(data);
-                        
-                    }
-                    res.render('list',{bitcoin_data:result_data});
-                    
-                });
+                        res.render('list',{bitcoin_data:result_data});
+                }
+               
 
                 
             });
