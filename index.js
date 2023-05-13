@@ -25,17 +25,8 @@ app.get('/', function (req, res) {
             for (var i = 0; i < 11; i++) {
                 result.push(Object.keys(apiData)[i]);
             }
-            var con = mysql.createConnection({
-                host: "sql12.freemysqlhosting.net",
-                user: "sql12616165",
-                password: '9zaLtULG7L',
-                database: 'sql12616165',
-                port: 3306,
-            });
-            con.connect(function (err) {
-                if (err) throw err;
-                console.log("Connected!");
-                for (var i = 0; i < 11; i++) {
+            
+             for (var i = 0; i < 11; i++) {
                     var index = result[i];
                     var name_value = apiData[index].name;
                     var last_value = apiData[index].last;
@@ -52,13 +43,9 @@ app.get('/', function (req, res) {
                             base_unit_item: apiData[index].base_unit,
                         }
                         result_data.push(data);
-                        res.render('list',{bitcoin_data:result_data});
+                        
                 }
-               
-
-                
-            });
-
+                res.render('list',{bitcoin_data:result_data});
             
         });
         
